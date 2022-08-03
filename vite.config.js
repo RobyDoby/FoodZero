@@ -1,6 +1,7 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
 import handlebars from 'vite-plugin-handlebars';
+import viteImagemin from 'vite-plugin-imagemin';
 
 const root = resolve(__dirname, 'src');
 const outDir = resolve(__dirname, 'dist');
@@ -45,6 +46,33 @@ export default defineConfig({
    plugins: [
       handlebars({
          partialDirectory: resolve(root, 'html'),
+      }),
+      viteImagemin({
+         gifsicle: {
+            optimizationLevel: 7,
+            interlaced: false,
+         },
+         optipng: {
+            optimizationLevel: 7,
+         },
+         mozjpeg: {
+            quality: 20,
+         },
+         pngquant: {
+            quality: [0.8, 0.9],
+            speed: 4,
+         },
+         svgo: {
+            plugins: [
+               {
+                  name: 'removeViewBox',
+               },
+               {
+                  name: 'removeEmptyAttrs',
+                  active: false,
+               },
+            ],
+         },
       }),
    ],
 });
