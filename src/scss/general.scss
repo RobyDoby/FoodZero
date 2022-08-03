@@ -1,0 +1,52 @@
+$mainColor: #fff;
+$mainColorDark: #000;
+$accentColor: #233000;
+
+html {
+   font-size: clamp(0.31rem, calc(0.18rem + 0.69vw), 1rem);
+}
+body {
+   color: $mainColorDark;
+   font-size: 1.5rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: 'Rufina', serif;
+   font-weight: 700;
+}
+h1 {
+   font-size: rem(148);
+   line-height: math.div(152, 148);
+}
+h2 {
+   font-size: rem(108);
+   line-height: math.div(120, 108);
+}
+h3 {
+   font-size: rem(68);
+   line-height: math.div(84, 68);
+}
+h4 {
+   font-size: rem(48);
+   line-height: math.div(64, 48);
+}
+p {
+   font-size: clamp(1.5rem, calc(5.1rem + -3vw), 4.5rem);
+   line-height: math.div(33.6, 24);
+}
+.btn {
+   padding: rem(20) rem(46);
+   border: 2px solid $mainColorDark;
+   background-color: inherit;
+   font-size: rem(32);
+   line-height: math.div(48, 32);
+}
+[class*='__container'] {
+   max-width: rem(1644);
+   margin-inline: auto;
+   padding-inline: rem(15);
+}

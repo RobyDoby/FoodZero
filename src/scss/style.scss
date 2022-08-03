@@ -1,0 +1,20 @@
+@use 'sass:math';
+// Подключаем сброс стилей
+@import 'reset/reset';
+
+// Подключаем миксины
+@import 'base/mixins';
+
+// Подключение шрифтов ===========================================================================================================================================================================================================================================================================
+@import 'fonts/fonts';
+//&display=swap - добавить при подключении через плагин
+@import url(https://fonts.googleapis.com/css?family=Lato:regular&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Rufina:regular,700&display=swap);
+
+// Подключение стилей общих элементов проекта
+@import 'general';
+
+// Подключение стилей отдельных блоков
+@import 'header';
+@import 'main';
+@import 'footer';
