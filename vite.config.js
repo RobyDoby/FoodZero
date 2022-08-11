@@ -12,7 +12,7 @@ export default defineConfig({
       outDir,
       emptyOutDir: true,
       cssCodeSplit: true,
-      minify: true,
+      minify: false,
       rollupOptions: {
          input: {
             main: resolve(root, 'index.html'),
