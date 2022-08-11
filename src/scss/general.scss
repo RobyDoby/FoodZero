@@ -45,6 +45,14 @@ p {
    font-size: rem(32);
    line-height: math.div(48, 32);
 }
+.btn:focus-visible {
+   outline: 5px solid $accentColor;
+   outline-offset: 5px;
+}
+.btn[data-accent]:focus-visible {
+   outline: 5px solid $mainColor;
+   outline-offset: 5px;
+}
 [class*='__container'] {
    $max-width: rem(1644);
    $padding: rem(30);

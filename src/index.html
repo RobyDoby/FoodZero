@@ -7,7 +7,11 @@
       <title>FoodZero</title>
    </head>
    <body>
-      {{>_header}} {{>_main}} {{>_footer}}
+      {{>_header}}
+      <main class="main">
+         {{>_ourMenu}} {{>_features}} {{>_blog}} {{>_reservation}} {{>_menuCategories}}
+      </main>
+      {{>_footer}}
       <script type="module" src="/main.js"></script>
    </body>
 </html>
