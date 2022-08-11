@@ -6,20 +6,13 @@
       position: absolute;
       inset: 0;
       z-index: -1;
-      background-image: url(../img/our-menu-section-bg.png);
+      background-image: url(/images/our-menu-section-bg.png);
       background-position: top right;
       background-repeat: no-repeat;
       background-size: contain;
       max-width: rem(890);
       margin-left: auto;
    }
-   // .our-menu__content
-
-   &__content {
-      padding-top: clamp(1.88rem, calc(0.05rem + 9.13vw), 11rem);
-      padding-bottom: clamp(2.5rem, calc(0.28rem + 11.13vw), 13.63rem);
-   }
-
    // .our-menu__title
 
    &__title {
@@ -36,6 +29,8 @@
    display: grid;
    grid-template-columns: 1fr 1fr;
    gap: rem(60);
+   padding: 0;
+   margin: 0;
    // .menu-list__item
 
    &__item {
@@ -53,5 +48,95 @@
    &__price {
       border-bottom: 4px dotted $mainColorDark;
       text-align: end;
+   }
+}
+
+.kitchen-features {
+   // .kitchen-features__header
+   &__header {
+      background-color: hsl(85, 29%, 92%);
+      isolation: isolate;
+   }
+
+   // .kitchen-features__main
+   &__main {
+      display: flex;
+      gap: rem(60);
+   }
+}
+.main-features {
+   // .main-features__image
+
+   &__image {
+      margin-left: -1rem;
+      position: relative;
+      flex: 1 1 65%;
+
+      &::before {
+         content: '';
+         position: absolute;
+         max-width: rem(365);
+         inset: rem(-40) 0 0 0;
+         z-index: -1;
+         background: url(../images/Leaf.png) no-repeat;
+         background-size: contain;
+         transform: rotateY(180deg);
+      }
+   }
+
+   // .top-features__text
+
+   &__text {
+      position: relative;
+      flex: 1 1 35%;
+
+      &::after {
+         content: '';
+         position: absolute;
+         max-width: rem(450);
+         margin-left: auto;
+         inset: 0;
+         z-index: -1;
+         background: url(../images/Leaf.png) no-repeat;
+         background-position: -20% 80%;
+         background-size: contain;
+      }
+   }
+   // .top-features__description
+
+   &__description {
+      margin-top: rem(18);
+   }
+}
+
+.kitchen-features {
+   // .kitchen-features__factors
+
+   &__factors {
+      display: flex;
+      gap: rem(60);
+      list-style: none;
+   }
+}
+.factors-features {
+   // .factors-features__factor
+
+   &__factor {
+      text-align: center;
+
+      & > * {
+         margin-bottom: rem(40);
+      }
+   }
+
+   // .factors-features__icon
+
+   &__icon {
+      font-size: rem(150);
+      width: min-content;
+      padding: rem(55);
+      border-radius: 100vmax;
+      background-color: hsl(85, 29%, 92%);
+      margin-inline: auto;
    }
 }

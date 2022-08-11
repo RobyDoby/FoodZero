@@ -46,7 +46,17 @@ p {
    line-height: math.div(48, 32);
 }
 [class*='__container'] {
-   max-width: rem(1644);
+   $max-width: rem(1644);
+   $padding: rem(30);
+   width: min($max-width, 100% - $padding);
    margin-inline: auto;
-   padding-inline: rem(15);
+}
+.main-spacing {
+   padding-block: clamp(5rem, calc(3.23rem + 8.88vw), 12.5rem);
+}
+.main-spacing-bottom {
+   padding-bottom: clamp(5rem, calc(3.23rem + 8.88vw), 12.5rem);
+}
+.main-spacing-top {
+   padding-top: clamp(5rem, calc(3.23rem + 8.88vw), 12.5rem);
 }

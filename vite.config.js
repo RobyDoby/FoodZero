@@ -69,7 +69,7 @@ export default defineConfig({
                },
                {
                   name: 'removeEmptyAttrs',
-                  active: false,
+                  active: true,
                },
             ],
          },
