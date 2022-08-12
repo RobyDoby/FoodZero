@@ -4,14 +4,18 @@
       <meta charset="UTF-8" />
       <link rel="icon" type="image/svg+xml" href="/vite.svg" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
       <title>FoodZero</title>
    </head>
    <body>
       {{>_header}}
       <main class="main">
          {{>_ourMenu}} {{>_features}} {{>_blog}} {{>_reservation}} {{>_menuCategories}}
+         {{>_testimonials}}
       </main>
       {{>_footer}}
+      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+      <script type="module" src="./js/swiper.js"></script>
       <script type="module" src="/main.js"></script>
    </body>
 </html>

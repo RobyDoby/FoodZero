@@ -1,0 +1,98 @@
+.testimonials {
+   // .testimonials__content
+
+   &__content {
+      padding: rem(20) rem(108);
+   }
+}
+.swiper {
+   width: 100%;
+   height: 100%;
+   position: relative;
+
+   &__post {
+      font-family: 'Rufina', serif;
+      font-weight: 700;
+      font-size: rem(48);
+      line-height: math.div(64, 48);
+      position: relative;
+
+      &::after {
+         content: '';
+         position: absolute;
+         inset: 0;
+         z-index: -1;
+         background: url(../images/double-quotes.png) no-repeat;
+         background-size: contain;
+         background-position: right center;
+      }
+   }
+
+   // .swiper__bottom
+
+   &__bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: rem(85);
+   }
+
+   // .swiper__author
+
+   &__author {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: rem(60);
+
+      & > img {
+         max-width: rem(170);
+         aspect-ratio: 1 / 1;
+      }
+   }
+
+   // .swiper__text
+
+   &__text {
+      flex: 1 1 100%;
+   }
+   // .swiper__slide-counter
+   &__controls {
+      position: absolute;
+      max-width: rem(238);
+      right: 5%;
+      bottom: 15%;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      justify-content: space-between;
+
+      & > * {
+         display: inline;
+      }
+   }
+   &-button-prev,
+   &-button-next {
+      position: relative;
+      right: 0;
+      left: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      color: $accentColor;
+      cursor: pointer;
+   }
+   &-button-prev {
+   }
+   &-button-next {
+   }
+   &-pagination {
+      position: relative;
+      text-align: center;
+      transition: 0.3s opacity;
+      transform: translate3d(0, 0, 0);
+      z-index: 10;
+      font-size: rem(32);
+      line-height: math.div(48, 32);
+   }
+}

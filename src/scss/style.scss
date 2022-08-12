@@ -6,7 +6,7 @@
 @import 'base/mixins';
 
 // Подключение шрифтов ===========================================================================================================================================================================================================================================================================
-@import 'fonts/fonts';
+@import './fonts';
 //&display=swap - добавить при подключении через плагин
 @import url(https://fonts.googleapis.com/css?family=Lato:regular&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Rufina:regular,700&display=swap);
@@ -21,4 +21,5 @@
 @import 'blog';
 @import 'reservation';
 @import 'menuCategories';
+@import 'testimonials';
 @import 'footer';
