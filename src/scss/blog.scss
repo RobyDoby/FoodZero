@@ -77,3 +77,11 @@
       aspect-ratio: 1 / 1;
    }
 }
+@media screen and (max-width: 40em) {
+   .blog__cards {
+      grid-template-columns: 1fr;
+   }
+   .blog__card::after {
+      font-size: 2.5rem;
+   }
+}

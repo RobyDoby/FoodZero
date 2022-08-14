@@ -99,5 +99,39 @@
       }
    }
 }
+@media screen and (max-width: 30em) {
+   .footer__top {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      text-align: center;
+
+      & > * {
+         flex: 1 1 50%;
+      }
+   }
+   .contacts-footer__item {
+      font-size: 2rem;
+   }
+   .subscription-footer {
+      margin-top: rem(50);
+
+      &__description {
+         font-size: 1.5rem;
+      }
+   }
+   .bottom-footer__content {
+      flex-wrap: wrap;
+      text-align: center;
+
+      & > * {
+         flex: 1 1 100%;
+      }
+   }
+   .bottom-footer__social-medias {
+      justify-content: center;
+      padding-block: rem(40);
+      font-size: 4rem;
+   }
+}
 
 //====================================================================================================

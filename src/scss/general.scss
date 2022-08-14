@@ -23,6 +23,10 @@ body {
       overscroll-behavior: none;
    }
 }
+::selection {
+   background-color: $accentColor;
+   color: $mainColor;
+}
 h1,
 h2,
 h3,
@@ -89,4 +93,17 @@ p {
 }
 .main-spacing-top {
    padding-top: clamp(5rem, calc(3.23rem + 8.88vw), 12.5rem);
+}
+
+@media screen and (max-width: 40em) {
+   .btn:hover,
+   .btn:focus-visible {
+      outline: 2px solid $accentColor;
+      outline-offset: 2px;
+   }
+   .btn[data-accent]:hover,
+   .btn[data-accent]:focus-visible {
+      outline: 2px solid $mainColor;
+      outline-offset: 2px;
+   }
 }

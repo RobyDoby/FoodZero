@@ -61,3 +61,19 @@
       font-size: 0.5em;
    }
 }
+@media screen and (max-width: 30em) {
+   .menu-categories {
+      &__cards {
+         flex-wrap: wrap;
+      }
+      &__card {
+         flex: 1 1 100%;
+      }
+      &__text {
+         font-size: 6rem;
+      }
+      &__link {
+         font-size: inherit;
+      }
+   }
+}

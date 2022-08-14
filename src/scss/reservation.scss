@@ -35,13 +35,7 @@
       & select {
          align-self: stretch;
          position: relative;
-         border: none;
          background-color: transparent;
-         appearance: none;
-         -webkit-appearance: none;
-         width: 100%;
-         height: 100%;
-         outline: none;
          cursor: pointer;
 
          &:focus-within + span {
@@ -55,23 +49,8 @@
       background-color: transparent;
       border: 2px solid $mainColorDark;
 
-      &:focus-visible {
-         border: 2px solid red;
+      &:focus {
+         outline: 2px solid $accentColor;
       }
-   }
-}
-// .select-wrapper
-.select-wrapper {
-   display: flex;
-   align-items: center;
-   position: relative;
-
-   & span {
-      position: absolute;
-      top: 50%;
-      right: 30%;
-      pointer-events: none;
-      transform: translateY(-50%);
-      transition: all 300ms ease;
    }
 }

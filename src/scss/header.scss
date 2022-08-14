@@ -51,6 +51,7 @@
    // .menu__button
 
    &__button {
+      text-decoration: none;
       color: $mainColor;
       border-color: $mainColor;
    }
@@ -149,7 +150,7 @@
 
    &__content {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+      grid-template-columns: 1fr 1fr;
       gap: rem(60);
    }
 
@@ -172,5 +173,25 @@
 
    &__title {
       margin-block: rem(54);
+   }
+}
+@media screen and (max-width: 30em) {
+   .footer-header__content {
+      grid-template-columns: 1fr;
+   }
+
+   .footer-header {
+      &__half-second {
+         margin: 0;
+         display: grid;
+
+         & > img {
+            margin-block: 5rem;
+            order: 1;
+         }
+      }
+      &__description {
+         order: 2;
+      }
    }
 }

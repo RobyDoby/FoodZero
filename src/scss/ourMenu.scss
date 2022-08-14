@@ -50,3 +50,12 @@
       text-align: end;
    }
 }
+@media screen and (max-width: 40em) {
+   .menu-list {
+      grid-template-columns: 1fr;
+
+      &__item {
+         margin-bottom: rem(80);
+      }
+   }
+}
