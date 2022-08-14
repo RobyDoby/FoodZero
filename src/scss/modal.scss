@@ -1,0 +1,126 @@
+.modal {
+   width: 100vw;
+   height: 100vh;
+   position: fixed;
+   inset: 0;
+   background: linear-gradient(to bottom, rgb(34 46 0 / 0.8), rgb(34 46 0 / 0.8)),
+      url(../images/nav-bg.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   z-index: 999;
+   color: $mainColor;
+   transform: translateX(-100%);
+   opacity: 0;
+   visibility: hidden;
+   transition: all 300ms ease-in-out;
+
+   // active
+
+   &[data-visible='true'] {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+   }
+   // .modal__btn
+   &__btn {
+      position: absolute;
+      top: rem(30);
+      left: rem(80);
+      border: none;
+      background: none;
+      color: inherit;
+      font-weight: 900;
+      font-size: 3rem;
+      cursor: pointer;
+      padding-inline: 0.25em;
+      transition: color 200ms ease;
+
+      &:hover,
+      &:focus-visible {
+         color: hsl(65, 100%, 20%);
+      }
+   }
+
+   // .modal__content
+
+   &__content {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: rem(220) rem(150);
+      padding-block: rem(110);
+   }
+
+   // .modal__links
+
+   &__links {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: rem(28);
+      font-family: 'Rufina', serif;
+      font-weight: 700;
+      font-size: clamp(rem(66), rem(20) + 3vw, rem(24));
+      list-style: none;
+   }
+   &__item {
+      pointer-events: none;
+   }
+   // .modal__link
+
+   &__link {
+      pointer-events: all;
+      text-decoration: none;
+      color: inherit;
+      text-transform: uppercase;
+
+      &:hover,
+      &:focus-visible {
+         border-bottom: 2px dotted $mainColor;
+      }
+   }
+}
+.contacts-modal {
+   display: flex;
+   flex-direction: column;
+   gap: rem(38);
+   align-self: end;
+   // .contacts-modal__title
+
+   &__title {
+      padding-bottom: rem(8);
+      border-bottom: 2px dotted $mainColor;
+   }
+
+   // .contacts-modal__items
+
+   &__items {
+      display: flex;
+      flex-direction: column;
+      gap: rem(38);
+   }
+   // .contacts-modal__social-medias
+
+   &__social-medias {
+      display: flex;
+      gap: rem(18);
+      font-size: 2rem;
+      cursor: pointer;
+
+      & a {
+         text-decoration: none;
+         color: inherit;
+      }
+
+      & span {
+         transition: color 300ms ease;
+      }
+
+      & span:hover,
+      & span:focus-visible {
+         color: hsl(65, 100%, 20%);
+      }
+   }
+}

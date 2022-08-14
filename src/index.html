@@ -7,15 +7,16 @@
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
       <title>FoodZero</title>
    </head>
-   <body>
+   <body class="preload">
       {{>_header}}
       <main class="main">
          {{>_ourMenu}} {{>_features}} {{>_blog}} {{>_reservation}} {{>_menuCategories}}
          {{>_testimonials}}
       </main>
-      {{>_footer}}
+      {{>_modal}} {{>_footer}}
       <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
       <script type="module" src="./js/swiper.js"></script>
+      <script type="module" src="./js/modal.js"></script>
       <script type="module" src="/main.js"></script>
    </body>
 </html>

@@ -1,13 +1,27 @@
-$mainColor: #fff;
-$mainColorDark: #000;
-$accentColor: #233000;
+$mainColor: hsl(0, 0%, 100%);
+$mainColorDark: hsl(0, 0%, 0%);
+$accentColor: rgb(34, 46, 0);
 
 html {
    font-size: clamp(0.31rem, calc(0.18rem + 0.69vw), 1rem);
+   scroll-behavior: smooth;
 }
 body {
    color: $mainColorDark;
    font-size: 1.5rem;
+
+   &.preload * {
+      -webkit-transition: none !important;
+      -moz-transition: none !important;
+      -ms-transition: none !important;
+      -o-transition: none !important;
+      scroll-behavior: auto !important;
+   }
+   &.locked {
+      overflow: hidden;
+      touch-action: none;
+      overscroll-behavior: none;
+   }
 }
 h1,
 h2,
@@ -48,11 +62,15 @@ p {
    background-color: inherit;
    font-size: rem(32);
    line-height: math.div(48, 32);
+   cursor: pointer;
+   transition: all 300ms ease-in-out;
 }
+.btn:hover,
 .btn:focus-visible {
    outline: 5px solid $accentColor;
    outline-offset: 5px;
 }
+.btn[data-accent]:hover,
 .btn[data-accent]:focus-visible {
    outline: 5px solid $mainColor;
    outline-offset: 5px;

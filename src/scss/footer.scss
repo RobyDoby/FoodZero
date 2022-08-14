@@ -1,3 +1,103 @@
 //====================================================================================================
+.footer {
+   background-color: $accentColor;
+   color: $mainColor;
+   // .footer__top
+
+   &__top {
+      padding-block: rem(135);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   // .footer__title
+
+   &__title {
+      font-family: 'Rufina', serif;
+      font-weight: 700;
+      font-size: rem(68);
+      line-height: math.div(83.98, 68);
+   }
+
+   // .footer__contacts
+
+   &__contacts {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: rem(55);
+   }
+}
+.contacts-footer {
+   &__items {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: rem(28);
+   }
+   &__item {
+      font-size: rem(18);
+      line-height: math.div(25, 18);
+   }
+}
+.subscription-footer {
+   display: grid;
+   grid-template-columns: 1fr;
+   gap: rem(55);
+   //.subscription-footer__input
+   &__input {
+      padding: rem(30) rem(40);
+      border: 2px solid $mainColor;
+      background-color: inherit;
+      margin-right: rem(28);
+      margin-bottom: rem(15);
+      color: inherit;
+   }
+   // .subscription-footer__description
+   &__description {
+      font-size: rem(14);
+      line-height: math.div(16.8, 14);
+   }
+   // .subscription-footer__btn
+
+   &__btn {
+      border-color: transparent;
+      background-color: hsl(65, 100%, 20%);
+      color: $mainColor;
+   }
+}
+.bottom-footer {
+   // .bottom-footer__container
+   border-top: 2px dotted $mainColor;
+
+   // .bottom-footer__content
+
+   &__content {
+      padding-block: rem(58) rem(70);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+   // .bottom-footer__social-medias
+   &__social-medias {
+      display: flex;
+      gap: rem(28);
+      font-size: 1.2em;
+
+      & a {
+         text-decoration: none;
+         color: inherit;
+      }
+
+      & span {
+         cursor: pointer;
+         transition: color 300ms ease;
+      }
+      & span:hover,
+      & span:focus-visible {
+         color: hsl(65, 100%, 20%);
+      }
+   }
+}
 
 //====================================================================================================
