@@ -17,7 +17,9 @@
    // .menu__logo
 
    &__logo {
+      text-decoration: none;
       font-size: rem(120);
+      color: inherit;
    }
 
    // .menu__icon

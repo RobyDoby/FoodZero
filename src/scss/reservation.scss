@@ -32,6 +32,11 @@
       align-items: center;
       padding-block: clamp(rem(130), 1rem + 5vw, rem(50));
 
+      &::selection {
+         background-color: $accentColor;
+         color: $mainColor;
+      }
+
       & select {
          align-self: stretch;
          position: relative;

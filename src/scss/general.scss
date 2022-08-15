@@ -5,6 +5,7 @@ $accentColor: rgb(34, 46, 0);
 html {
    font-size: clamp(0.31rem, calc(0.18rem + 0.69vw), 1rem);
    scroll-behavior: smooth;
+   scroll-margin-top: -1rem;
 }
 body {
    color: $mainColorDark;
